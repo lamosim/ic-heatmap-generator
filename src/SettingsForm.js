@@ -3,7 +3,7 @@
 
 const SettingsForm = ({bindDateStart, bindTimeStart, bindDateEnd, bindTimeEnd, bindCapability, bindTimezoneExcel,
                           bindShowAssets, bindShowPIR, bindTimezoneHeatmap, bindOpacityHeatmap, bindShowLocations,
-                        bindUnitSupported}) => {
+                        bindUnitSupported, dateEnd, dateStart}) => {
 
     return (
         <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 w-auto mx-auto">
@@ -30,17 +30,17 @@ const SettingsForm = ({bindDateStart, bindTimeStart, bindDateEnd, bindTimeEnd, b
             <div className="-mx-3 mb-4 grid grid-cols-2">
 
                 <div className="px-3">
-                    <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="date-end">
+                    <label className="block uppercase tracking-wide text-xs font-bold mb-2 " htmlFor="date-end">
                         Date End
                     </label>
-                    <input {...bindDateEnd} className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" id="date-end" type="date" />
+                    <input {...bindDateEnd} className={"appearance-none block w-full bg-grey-lighter text-grey-darker border rounded py-3 px-4 mb-3 " + ((dateEnd < dateStart) ? "border-red-500" : "")} id="date-end" type="date" />
                 </div>
 
                 <div className="px-3">
                     <label className="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" htmlFor="time-end">
                         Time End (Local)
                     </label>
-                    <input {...bindTimeEnd} className="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="time-end" type="time" />
+                    <input {...bindTimeEnd} className={"appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 " + ((dateEnd < dateStart) ? "border-red-500" : "")} id="time-end" type="time" />
                 </div>
 
             </div>
@@ -144,16 +144,16 @@ const SettingsForm = ({bindDateStart, bindTimeStart, bindDateEnd, bindTimeEnd, b
                         Heatmap Opacity
                     </label>
                 <datalist id="custom-list">
-                    <option value=".1"></option>
-                    <option value=".2"></option>
-                    <option value=".3"></option>
-                    <option value=".4"></option>
-                    <option value=".5"></option>
-                    <option value=".6"></option>
-                    <option value=".7"></option>
-                    <option value=".8"></option>
-                    <option value=".9"></option>
-                    <option value="1"></option>
+                    <option value=".1"> </option>
+                    <option value=".2"> </option>
+                    <option value=".3"> </option>
+                    <option value=".4"> </option>
+                    <option value=".5"> </option>
+                    <option value=".6"> </option>
+                    <option value=".7"> </option>
+                    <option value=".8"> </option>
+                    <option value=".9"> </option>
+                    <option value="1"> </option>
                 </datalist>
                 <input {...bindOpacityHeatmap} type="range" min=".1" max="1" step=".1" id="opacity-heatmap"/>
             </div>
