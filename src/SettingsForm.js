@@ -42,6 +42,7 @@ const SettingsForm = ({bindDateStart, bindTimeStart, bindDateEnd, bindTimeEnd, b
                     </label>
                     <input {...bindTimeEnd} className={"appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 " + ((dateEnd < dateStart) ? "border-red-500" : "")} id="time-end" type="time" />
                 </div>
+                {((dateEnd < dateStart) ? <div className="text-red-500 text-xs px-3 pt-0">Date Start must be before Date End</div> : "")}
 
             </div>
 

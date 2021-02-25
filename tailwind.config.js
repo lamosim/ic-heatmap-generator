@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    enabled: false,
+    enabled: true,
     content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html']
   },
   darkMode: false, // or 'media' or 'class'
@@ -8,6 +8,9 @@ module.exports = {
     extend: {
       fontFamily: {
         body: ['Lato']
+      },
+      zIndex: {
+      '100':100
       },
       colors: {
         primary: {

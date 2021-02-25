@@ -4,8 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/*@layer components {*/
-/*  .heatmap-canvas {*/
-/*    @apply w-full h-full;*/
-/*  }*/
-/*}*/
+@layer components {
+  .shadow-text {
+    text-shadow: 1px 1px 2px white;
+  }
+}

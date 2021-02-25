@@ -25,7 +25,7 @@ function App() {
         <div className="App font-body bg-gray-100">
             <div className=" bg-gray-800">
                 <div className="text-2xl font-bold text-white px-3 pt-1">NTC ISR Heat Map Generator (IHMG)</div>
-                <div className="text-xl font-bold text-white px-3 pb-1 text-opacity-60">V1.0.1</div>
+                <div className="text-xl font-bold text-white px-3 pb-1 text-opacity-60">V1.0.2</div>
             </div>
             <div className="content md:grid md:grid-cols-3 py-3 text-gray-600">
                 <div className="md:col-span-1 px-4 flex flex-col">
