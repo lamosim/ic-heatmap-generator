@@ -15,7 +15,7 @@ const TrackerUpload = ({ setTrackerData }) => {
             var data = new Uint8Array(e.target.result);
             var workbook = XLSX.read(data, {type: 'array'});
 
-            /* DO SOMETHING WITH workbook HERE */
+            /* USE WORKBOOK */
             setTrackerData(tracker2arr(workbook.Sheets['TRACKER']));
             setFileName(f.name);
             setPending(false);

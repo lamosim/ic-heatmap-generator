@@ -3,7 +3,7 @@
 
 const SettingsForm = ({bindDateStart, bindTimeStart, bindDateEnd, bindTimeEnd, bindCapability, bindTimezoneExcel,
                           bindShowAssets, bindShowPIR, bindTimezoneHeatmap, bindOpacityHeatmap, bindShowLocations,
-                        bindUnitSupported, dateEnd, dateStart}) => {
+                        bindUnitSupported, dateEnd, dateStart, requestType, bindRequestType}) => {
 
     return (
         <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 w-auto mx-auto">
@@ -92,6 +92,22 @@ const SettingsForm = ({bindDateStart, bindTimeStart, bindDateEnd, bindTimeEnd, b
                         </div>
 
                     </div>
+                </div>
+
+            </div>
+
+            <div className="-mx-3 mb-4">
+
+                <div className="px-3">
+                    <label className="block uppercase tracking-wide text-xs font-bold mb-2 " htmlFor="request-type">
+                        Request Type
+                    </label>
+                    <select {...bindRequestType} className="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="request-type" >
+                        <option>ALL TYPES</option>
+                        <option>PREPLANNED</option>
+                        <option>IMMEDIATE</option>
+                        <option>DYNAMIC</option>
+                    </select>
                 </div>
 
             </div>

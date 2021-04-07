@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Lato']
+        'sans': ['Lato', 'Helvetica', 'Arial', 'sans-serif'],
+        'body': ['Lato']
       },
       zIndex: {
       '100':100
